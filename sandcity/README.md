@@ -1,12 +1,10 @@
-
-
 The idea here is to document how to create waypoint files that can be imported into xctrack and provide waypoints for
 Sand City and Marina. The ultimate goal is to teach newer XC pilots how to navigate and complete tasks.
 
-# How to create and import waypoint files
+# Creating waypoint files
 
 - Create a project in [google earth](https://earth.google.com/) and drop pins where you want them
-    -For example, my [sand city project](https://earth.google.com/earth/d/1X3ToC1Kt2kLXc0vw8LZcZgNbkZDY9afE?usp=sharing)
+  -For example, my [sand city project](https://earth.google.com/earth/d/1X3ToC1Kt2kLXc0vw8LZcZgNbkZDY9afE?usp=sharing)
 - Export as `KML` file
 - Run the `converter` to convert the KML file to a `.wpt` waypoint file
     1. install [uv](https://github.com/astral-sh/uv)
@@ -16,32 +14,39 @@ Sand City and Marina. The ultimate goal is to teach newer XC pilots how to navig
     - I usually put the file in a google drive folder
     - If you wanna use Android File Transfer or some other tool, drop it directly into
       `/Android/data/org.xcontest.XCTrack/files/Waypoints`
-- Load the file into [xctrack](https://xctrack.org/)
-    - Open XCTrack
-    - Pull down from the top and hit `Navigation`
 
-        ![main menu](screenshots/main-menu.png)
+You can use this sand-city waypoint file built from the above google earth project if you
+want: [sand-city.wpt](./sand-city.wpt).
 
-    - If a list of waypoints shows up, hit `cancel`
-    - Click the little flag button on the top
+# Loading waypoint files
 
-        ![waypoint-flag](screenshots/navigation.png)
+Load the file into your [XCTrack](https://xctrack.org/) app.
 
-    - Select the `Files` tab
-    - Click the download button in the top right
-        - Skip this if you dropped the file directly into `/Android/data/org.xcontest.XCTrack/files/Waypoints`
+- Open XCTrack
+- Pull down from the top and hit `Navigation`
 
-        ![waypoint-manager-files](screenshots/waypoint-manager-files.png)
+  ![main menu](screenshots/main-menu.png)
 
-    - Find your file and select it
-        - I usually select the file from google drive
-    - Now you can select/de-select waypoint files as desired
-    - Hit the back arrow
-    - You should now see waypoints!
+- If a list of waypoints shows up, hit `cancel`
+- Click the little flag button on the top
 
-        ![waypoints](screenshots/waypoint-navigation-waypoints.png)
+  ![waypoint-flag](screenshots/navigation.png)
 
-    - You can select one to start building a task
+- Select the `Files` tab
+- Click the download button in the top right
+    - Skip this if you dropped the file directly into `/Android/data/org.xcontest.XCTrack/files/Waypoints`
+
+  ![waypoint-manager-files](screenshots/waypoint-manager-files.png)
+
+- Find your file and select it
+    - I usually select the file from google drive
+- Now you can select/de-select waypoint files as desired
+- Hit the back arrow
+- You should now see waypoints!
+
+  ![waypoints](screenshots/waypoint-navigation-waypoints.png)
+
+- You can select one to start building a task
 
 # Building a task
 
@@ -60,7 +65,7 @@ Sand City and Marina. The ultimate goal is to teach newer XC pilots how to navig
 1. From the main XCTrack screen, swipe down and select `Navigation`
 2. Select `Competition Task` from the main naviation screen
 
-    ![navigation screen](screenshots/navigation.png)
+   ![navigation screen](screenshots/navigation.png)
 
 3. Add turnpoint
 4. Choose Waypoint
