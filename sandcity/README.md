@@ -54,7 +54,8 @@ Load the file into your [XCTrack](https://xctrack.org/) app.
 
 - **Waypoint**: Basically a point in space. Latitude + Longitude + Altitude
 - **Task**: At it's most basic, an ordered series of waypoints
-- **SSS**: Start Speed Section. Basically the starting point of the race. Go go speed racer.
+- **SSS**: Start Speed Section. Basically the starting point of the race. To start, you need to be inside the SSS
+  cylinder (circle made up of the waypoint and the defined radius) and pass outside the cylinder _after_ the start time.
 - **ESS**: End Speed Section. This is the end of "racing". Basically, hit this waypoint as fast as you possibly can, and
   then you can chill. it doesn't matter how long you take to get from ESS to goal. But you do have to get to goal.
 - **goal**: The final waypoint of the race. The second to last waypoint is usually ESS and the time it takes you to get
@@ -75,7 +76,8 @@ Load the file into your [XCTrack](https://xctrack.org/) app.
 8. Hit the back button
 9. Set `SSS open`
     - This is the start time
-    - Get in the air before this, but you have to tag the SSS waypoint at our after this time
+    - Get in the air before this
+    - Note that you have to be inside this start cylinder and cross out of it _after_ the start time
 10. Set `Task deadline`
     - Not very common for sprint league, just set it to sunset or something later than you'll be flying
 11. At this point, you should check the task distance with other pilots that also entered the task
