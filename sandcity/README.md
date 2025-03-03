@@ -1,4 +1,4 @@
-# Sand City Paragliding
+
 
 The idea here is to document how to create waypoint files that can be imported into xctrack and provide waypoints for
 Sand City and Marina. The ultimate goal is to teach newer XC pilots how to navigate and complete tasks.
@@ -19,20 +19,28 @@ Sand City and Marina. The ultimate goal is to teach newer XC pilots how to navig
 - Load the file into [xctrack](https://xctrack.org/)
     - Open XCTrack
     - Pull down from the top and hit `Navigation`
+
         ![main menu](screenshots/main-menu.png)
+
     - If a list of waypoints shows up, hit `cancel`
     - Click the little flag button on the top
-        - ![waypoint-flag](screenshots/navigation.png)
+
+        ![waypoint-flag](screenshots/navigation.png)
+
     - Select the `Files` tab
     - Click the download button in the top right
         - Skip this if you dropped the file directly into `/Android/data/org.xcontest.XCTrack/files/Waypoints`
-        - ![waypoint-manager-files](screenshots/waypoint-manager-files.png)
+
+        ![waypoint-manager-files](screenshots/waypoint-manager-files.png)
+
     - Find your file and select it
         - I usually select the file from google drive
     - Now you can select/de-select waypoint files as desired
     - Hit the back arrow
     - You should now see waypoints!
-        - ![waypoints](screenshots/waypoint-navigation-waypoints.png)
+
+        ![waypoints](screenshots/waypoint-navigation-waypoints.png)
+
     - You can select one to start building a task
 
 # Building a task
@@ -51,7 +59,9 @@ Sand City and Marina. The ultimate goal is to teach newer XC pilots how to navig
 
 1. From the main XCTrack screen, swipe down and select `Navigation`
 2. Select `Competition Task` from the main naviation screen
-![navigation screen](screenshots/navigation.png)
+
+    ![navigation screen](screenshots/navigation.png)
+
 3. Add turnpoint
 4. Choose Waypoint
 5. Set radius kilometers an dmeters
@@ -64,12 +74,16 @@ Sand City and Marina. The ultimate goal is to teach newer XC pilots how to navig
 10. Set `Task deadline`
     - Not very common for sprint league, just set it to sunset or something later than you'll be flying
 11. At this point, you should check the task distance with other pilots that also entered the task
-![task](screenshots/sand-city-task-1.png)
+
+    ![task](screenshots/sand-city-task-1.png)
+
 12. :warning: It is highly recommended at this point to save the task to file
     - I have had the fun experience of launching and realizing that I no longer had the task loaded in xctrack. If you
       save it to a file, you can probably re-load it while flying.
     - [Example of a saved task](./sand-city-task-1.xctsk)
 13. If other pilots are with you, may also want to his `Share task` | `Display QR code` and then they can load the task
     directly from your phone via their camera.
-![task](screenshots/sand-city-task-1-QR-code.png)
+
+    ![task](screenshots/sand-city-task-1-QR-code.png)
+
 14. Hit the back button twice and you are now waiting for the SSS open time and the start of the race!
