@@ -6,7 +6,7 @@ Sand City and Marina. The ultimate goal is to teach newer XC pilots how to navig
 # How to create and import waypoint files
 
 - Create a project in [google earth](https://earth.google.com/) and drop pins where you want them
-  -For example, my [sand city project](https://earth.google.com/earth/d/1X3ToC1Kt2kLXc0vw8LZcZgNbkZDY9afE?usp=sharing)
+    -For example, my [sand city project](https://earth.google.com/earth/d/1X3ToC1Kt2kLXc0vw8LZcZgNbkZDY9afE?usp=sharing)
 - Export as `KML` file
 - Run the `converter` to convert the KML file to a `.wpt` waypoint file
     1. install [uv](https://github.com/astral-sh/uv)
