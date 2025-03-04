@@ -35,3 +35,5 @@ to `.wpt` waypoint files for importing into [xctrack](https://xctrack.org/). Hap
 
 - `kml` -->
     - `wpt`
+- `wpt` -->
+    - `kml`

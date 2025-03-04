@@ -1,9 +1,11 @@
 import os
 from typing import List
-import models.waypoint as models
+from typing import Optional
+from models.waypoint import Waypoint
 from rich import print
 from geopy.point import Point
 import chevron
+import re
 
 
 class WPT:
@@ -15,25 +17,51 @@ class WPT:
             self._points = []
 
     @property
-    def waypoints(self) -> List[models.Waypoint]:
+    def waypoints(self) -> List[Waypoint]:
         return self._points
 
     @waypoints.setter
-    def waypoints(self, waypoints: List[models.Waypoint]):
+    def waypoints(self, waypoints: List[Waypoint]):
         self._points = waypoints
 
     def __load_file(self, file: str):
-        raise RuntimeError(f"TODO")
+        points = []
+        with open(file, "r") as f:
+            for it in f:
+                if it.startswith("$FormatGEO"):
+                    continue
+                pt = self.__parse_line(it)
+                if pt:
+                    points.append(pt)
+
+        return points
+
+    def __parse_line(self, line: str) -> Optional[Waypoint]:
+        pattern = re.compile(
+            r'([^ ]*) {4}([NS]) (\d*) (\d*) (\d*\.\d*) {4}([EW]) (\d*) (\d*) (\d*\.\d*) {3}(\d*)( {2}?(.*))?')
+        if match := re.search(pattern, line):
+            name = match.group(1)
+            lat, long = self.__from_dms(
+                '''{} {}' {}" {} {} {}' {}" {}'''
+                .format(
+                    match.group(3),
+                    match.group(4),
+                    match.group(5),
+                    match.group(2),
+                    match.group(7),
+                    match.group(8),
+                    match.group(9),
+                    match.group(6)
+                )
+            )
+            alt = float(match.group(10))
+            description = match.group(12)
+            return Waypoint(name, lat, long, alt, description)
 
     def to_file(self, file):
-        # convert to values dict
         waypoints = []
         for p in self._points:
             lat, long = self.__to_dms(p)
-            print(f"{p.name}")
-            print(f"\t{p.lat} --> {lat[0]} {lat[1]} {lat[2]} {lat[3]}")
-            print(f"\t{p.long} --> {long[0]} {long[1]} {long[2]} {long[3]}")
-            print(f"\t{p.altitude} --> {p.altitude}")
             waypoints.append({
                 "name": p.name,
                 "description": p.description,
@@ -59,9 +87,13 @@ class WPT:
             with open(file, "w") as output:
                 output.write(content)
 
+    @staticmethod
+    def __from_dms(dms: str) -> {float, float}:
+        p = Point(dms)
+        return p.latitude, p.longitude
 
     @staticmethod
-    def __to_dms(wpt: models.Waypoint):
+    def __to_dms(wpt: Waypoint):
         p = Point(wpt.lat, wpt.long).format(False, '', '', '')
         lat, long = p.split(",")
         lat = lat.strip().split(" ")
