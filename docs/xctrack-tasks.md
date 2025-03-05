@@ -6,18 +6,22 @@ the [XCTrack](https://xctrack.org/) app.
 # Definitions
 
 - **Waypoint**: Basically a point in space. Latitude + Longitude + Altitude
-- **Task**: At it's most basic, an ordered series of waypoints, each with a defined radius. The waypoint + radius
-  defines a cylinder that extends from the ground all the way up. When flying a task, you are flying from one of these
-  cylinders to the next in the defined order.
+- **Task**: At it's most basic, an ordered series of waypoints.
+- **Competition Task**: A task with start and end times and each ordered waypoint has a defined radius. The waypoint + radius
+  defines a cylinder that extends from the ground all the way up. You typically need to break the wall of this cylinder
+  to tag a waypoint. Each waypoint can also be defined as Start Speed Section, End Speed Section, or goal. When flying a
+  competition task, you are flying from one of the waypoint cylinders to the next in the defined order.
+- **XC/Waypoint task**: A simple list of waypoints without the competition times, cylinder radius, etc.
 - **Turnpoint**: A waypoint within a task and it's associated radius. When you are flying and get to a point where you
-  are _radius_ distance away from your current waypoint, you can turn and head towards the next waypoint. That's why it'
-  s referred to as a turnpoint.
+  are _radius_ distance away from your current waypoint, you can turn and head towards the next waypoint. That's why
+  it's referred to as a turnpoint.
 - **SSS**: Start Speed Section. Basically the starting point of the race. To start, you need to be inside the SSS
   cylinder (circle made up of the waypoint and the defined radius) and pass through the cylinder wall (to the outside of
   the cylinder) _after_ the start time.
-- **ESS**: End Speed Section. This is the end of "racing". Basically, hit this waypoint as fast as you possibly can, and
-  then you can chill. it doesn't matter how long you take to get from ESS to goal. But you do have to get to goal.
-- **goal**: The final waypoint (and radius... ie cylinder) of the race. The second to last waypoint is usually ESS and
+- **ESS**: End Speed Section. AKA `ES`. This is the end of "racing". Basically, hit this waypoint as fast as you
+  possibly can, and then you can chill. it doesn't matter how long you take to get from ESS to goal. But you do have to
+  get to goal.
+- **Goal**: The final waypoint (and radius... ie cylinder) of the race. The second to last waypoint is usually ESS and
   the time it takes you to get from ESS to goal does not factor into your race time.
 
 # Loading waypoint files
@@ -52,7 +56,8 @@ Load the file into your [XCTrack](https://xctrack.org/) app.
 # Building a task
 
 Sometimes you are the one defining the task. And sometimes someone gives you a simple list of waypoints and radii that
-you need to manually enter into your device as a task (like [this](../sandcity/sand-city-task-1.txt). Or hell, sometimes
+you need to manually enter into your device as a task (like [this](../sites/sandcity/sand-city-task-1.txt). Or hell,
+sometimes
 someone gives you [a QR code for the task](screenshots/sand-city-task-1-QR-code.png) and you can skip most of this.
 
 1. From the main XCTrack screen, swipe down and select `Navigation`
@@ -79,10 +84,10 @@ someone gives you [a QR code for the task](screenshots/sand-city-task-1-QR-code.
 12. :warning: It is highly recommended at this point to save the task to file
     - I have had the fun experience of launching and realizing that I no longer had the task loaded in xctrack. If you
       save it to a file, you can probably re-load it while flying.
-    - [Example of a saved task](../sandcity/sand-city-task-1.xctsk)
+    - [Example of a saved task](../sites/sandcity/sand-city-task-1.xctsk)
 13. If other pilots are with you, may also want to his `Share task` | `Display QR code` and then they can load the task
     directly from your phone via their camera.
 
     ![task](../docs/screenshots/sand-city-task-1-QR-code.png)
 
-14. Hit the back button twice and you are now waiting for the SSS open time and the start of the race!
+14. Hit the back button twice, and you are now waiting for the SSS open time and the start of the race!

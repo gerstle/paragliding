@@ -1,7 +1,0 @@
-Sand City Task #1
-BENCHES     100m    SSS
-FORT-ORD    50m
-OCEAN       300m
-BUNKERS     300m
-SK8-PARK    50m     ESS
-SC-LAUNCH   100m    GOAL

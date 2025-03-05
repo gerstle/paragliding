@@ -30,8 +30,8 @@ uv run main.py convert -s /paragliding/sandcity/sand-city.kml -d /paragliding/sa
 
 # Currently Supported conversions
 
-Basically covering my only current use case of taking [google earth](https://earth.google.com/) KML files and converint
-to `.wpt` waypoint files for importing into [xctrack](https://xctrack.org/). Happy to add more if it would be handy.
+Basically covering my only current use case of taking [Google Earth](https://earth.google.com/) KML files and converint
+to `.wpt` waypoint files for importing into [XCTrack](https://xctrack.org/). Happy to add more if it would be handy.
 
 - `kml` -->
     - `wpt`
